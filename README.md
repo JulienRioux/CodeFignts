@@ -14,7 +14,7 @@ image = [[7, 4, 0, 1],
          [1, 4, 2, 0]]
          
          
-The output should be
+The output should be:
 
 boxBlur(image) = [[5, 4], 
                   [4, 4]]
