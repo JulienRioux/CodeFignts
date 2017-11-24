@@ -1,17 +1,15 @@
-A string is said to be beautiful if b occurs in it no more times than a; c occurs in it no more times than b; etc.
+# A string is said to be beautiful if b occurs in it no more times than a; c occurs in it no more times than b; etc.
 
-Given a string, check whether it is beautiful.
+# Given a string, check whether it is beautiful.
 
-Example
+# Example
 
-For inputString = "bbbaacdafe", the output should be
-isBeautifulString(inputString) = true;
-For inputString = "aabbb", the output should be
-isBeautifulString(inputString) = false;
-For inputString = "bbc", the output should be
-isBeautifulString(inputString) = false.
-
-
+# For inputString = "bbbaacdafe", the output should be
+# isBeautifulString(inputString) = true;
+# For inputString = "aabbb", the output should be
+# isBeautifulString(inputString) = false;
+# For inputString = "bbc", the output should be
+# isBeautifulString(inputString) = false.
 
 def isBeautifulString(inputString):
     
@@ -26,5 +24,5 @@ def isBeautifulString(inputString):
     for i in range(len(alpha)-1):
         if inputString.count(alpha[i]) < inputString.count(alpha[i+1]):
             return False
-    
+    # Otherwise, everything is alright!
     return True
