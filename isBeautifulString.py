@@ -11,6 +11,7 @@
 # For inputString = "bbc", the output should be
 # isBeautifulString(inputString) = false.
 
+
 def isBeautifulString(inputString):
     
     # Create a list of all the letters in the alphabet
