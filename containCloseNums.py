@@ -1,4 +1,6 @@
-# Given an array of integers nums and an integer k, determine whether there are two distinct indices i and j in the array where nums[i] = nums[j] and the absolute difference between i and j is less than or equal to k.
+# Given an array of integers nums and an integer k, determine whether there are two distinct 
+# indices i and j in the array where nums[i] = nums[j] and the absolute difference between 
+# i and j is less than or equal to k.
 
 # Example
 
@@ -15,30 +17,24 @@
 
 
 
-
 def containsCloseNums(nums, k):
-    
+    # Return False if nums == 1 or 0
     if len(nums) < 2:
         return False
-    
+    # Create an empty dict to store the nums as keys and index as value
     D = {}
-    
-    ans = False
-    
+    # Append the key/value (number/index) element in the dictionnary
     for i in range(len(nums)):
+        # Append it to D if there is the num isn't already there as key
         if nums[i] not in D:
             D[nums[i]] = i
         else:
-            if type(D[nums[i]]) == int:
-                if i - D[nums[i]] <= k:
-                    ans = True
-                else:
-                    D[nums[i]] = [D[nums[i]]]
-                    D[nums[i]].append(i)
+            # If already there, check if the current index minus the index already there 
+            if i - D[nums[i]] <= k:
+                # Stop if it's the case
+                return True
             else:
-                for index in D[nums[i]]:
-                    print(i, index)
-                    if i - index <= k:
-                        ans = True
+                # Otherwise, replace the index value by the current index
+                D[nums[i]] = i
     
-    return ans
+    return False
